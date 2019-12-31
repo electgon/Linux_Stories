@@ -1,17 +1,17 @@
 # Linux Important Commands
 
-```
+```bash
 pwd
 mkdir
 ls
 ```
 -------------------------------------------------
 __extract files__: 
-```
+```bash
 tar  -x... filename
 ```
 __compress files__: 
-```
+```bash
 tar -c... <foldername> <targetname>
 ```
 -------------------------------------------------
@@ -19,7 +19,7 @@ tar -c... <foldername> <targetname>
 __Directory Size__
 
 To know size of directory
-```
+```bash
 du -s -h directory_name
 ```
 
@@ -28,19 +28,19 @@ du -s -h directory_name
 `-h`: to readable for human (in M or G)
 
 If you want to check sizes of some subdirectories in a directory, you can use the following command
-```
+```bash
 cd /path/to/your/directory
 du -s -h *  #(or du -sh or du -hs)
 ```
 
 but this command will list directories sizes with order of directories names. If you want to sort it descending order use:
-```
+```bash
 du -ks * | sort -nr | cut -f2 | xargs -d '\n' du -sh
 ```
 -------------------------------------------------
 
 __Disk Space__
-```
+```bash
 df -h
 ```
 
@@ -48,13 +48,13 @@ To make repartition for the disk spaces use `gparted` tool.
 
 -------------------------------------------------
 Clear terminal window
-```
+```bash
 clear
 ```
 -------------------------------------------------
 
 Delete Directory
-```
+```bash
 rm -r directory_name
 ```
 -------------------------------------------------
@@ -63,7 +63,7 @@ __search__
 
 To search for a word: `grep`
 
-```
+```bash
 grep 'word' filename
 grep 'word' file1 file2 file3
 grep 'string1 string2'  filename
@@ -75,7 +75,7 @@ grep --color 'data' fileName
 
 
 To search for a file
-```
+```bash
 find / -type f -name "file_name"
 ```
 
@@ -84,7 +84,7 @@ where `/` searches for the whole disk, `""` write file name inside.
 -------------------------------------------------
 
 To know if a package is installed or not
-```
+```bash
 ldconfig -p | grep libraryname
 ```
 
