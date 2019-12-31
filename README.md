@@ -8,7 +8,7 @@ ls
 -------------------------------------------------
 __extract files__: 
 ```
-tar  -x… filename
+tar  -x... filename
 ```
 __compress files__: 
 ```
@@ -17,6 +17,7 @@ tar -c... <foldername> <targetname>
 -------------------------------------------------
 
 __Directory Size__
+
 To know size of directory
 ```
 du -s -h directory_name
@@ -119,7 +120,7 @@ $ scp -r foo your_username@remotehost.edu:/some/remote/directory/bar
 ```
 
 Copying the files "foo.txt" and "bar.txt" from the local host to your home directory on the remote host
-```
+```bash
 $ scp foo.txt bar.txt your_username@remotehost.edu:~
 ```
 
@@ -147,11 +148,12 @@ This can be defined also in .bashrc file or .profile or in etc/profile
 -------------------------------------------------
 
 __Multiple Execution__
-
-A; B    Run A and then B, regardless of success of A
-A && B  Run B if A succeeded
-A || B  Run B if A failed
-A &     Run A in background
+```
+A; B    #Run A and then B, regardless of success of A
+A && B  #Run B if A succeeded
+A || B  #Run B if A failed
+A &     #Run A in background
+```
 
 -------------------------------------------------
 
