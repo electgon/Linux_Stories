@@ -271,7 +271,28 @@ These settings will become active after rebooting or restarting the service
 sudo /etc/init.d/networking  restart
 ```
 
+-------------------------------------------------
 
+__Building Cronjob__
+
+to build a cronjob in linux, open terminal window, type
+```
+crontab -e 
+```
+this shall open editor to add your task that you want to run. Adding a job is a simple line of code. First you have to decide when do yo need your job to run (hourly, daily, monthly, ...)
+```
+15 *  *  *  * /path/to/file/file.sh >> /path/to/output/outputfile.txt
+|  |  |  |  |-----> Day of Week (0~7, 0 is sunday, 7 is also sunday)
+|  |  |  |--------> Month (1~12)
+|  |  |-----------> Day of Month (1~31)
+|  |--------------> Hour (0~23)
+|-----------------> Minute (0~59)
+# note that 15 here means 15 minutes. 
+```
+if you want your cron job to run a file using an application, type command of your application then path to executable file. For instance if you need to run a python file you can run it as follows:
+```
+* * * * * python /absolute/path/to/script.py >>/tmp/out.txt 2>&1
+```
 
 
 
