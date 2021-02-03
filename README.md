@@ -239,6 +239,34 @@ Note that you have to log off and login again to see effect
 
 -------------------------------------------------
 
+__SSH__
+
+To connect to a remote host through SSH port (22):
+```
+ssh <user_name>@<remote_host>
+```
+
+To connect to a remote host through SSH port without need to re-type password everytime:
+
+* Generate a passphrase in the local host:
+```
+ssh-keygen -t rsa
+```
+
+* Generated passphrase can be found at:
+```
+~/.ssh/id_rsa.pub
+```
+
+* Send the generated passphrase to the remote host:
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub <user_name>@<remote_host>
+```
+alternatively (instead of last command), you can copy content of id_rsa.pub from
+local host and insert it in ~/.ssh/authorized_keys in remote host
+
+-------------------------------------------------
+
 __Networking__
 
 IP Address can be assigned dynamically or statically.
