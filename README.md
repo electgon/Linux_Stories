@@ -3,8 +3,41 @@
 ```bash
 pwd
 mkdir
+```
+-------------------------------------------------
+__Open a Terminal__:
+```bash
+xterm
+uxterm
+lxterminal
+terminator
+gnome-terminal
+```
+
+-------------------------------------------------
+__Listing__:
+
+to simple list
+```bash
 ls
 ```
+
+to list with permission details
+```bash
+ls -ll
+```
+
+to list with with hidden files
+```bash
+ls -la
+```
+
+to list sub-content in tree view
+```bash
+tree -L <depth>
+```
+where <depth> is an integer defines depth of listing in the tree 
+
 -------------------------------------------------
 __extract files__: 
 ```bash
